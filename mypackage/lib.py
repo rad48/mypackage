@@ -6,9 +6,16 @@
 from os.path import split
 import pandas as pd
 import datetime
+from PIL import Image
+import os
+
 
 pd.set_option('display.width', 200)
 
+def try_me():
+    path = os.path.join(os.path.dirname(__file__), 'data/meme.jpg')
+    image = Image.open(path)
+    image.show()
 
 def clean_data(data):
     """ clean data
